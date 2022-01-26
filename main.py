@@ -49,14 +49,18 @@ while base_day >= dates[-1] + diff:
     base_day -= datetime.timedelta(days=1)
 
 fig = plt.figure(figsize=(10.00, 6.50))
+plt.style.use('fivethirtyeight')
+
 ax1 = fig.add_subplot(111)
-ax1.set_ylim([0.0, 20.5])
+ax1.grid(True)
+ax1.set_ylim([0.0, 20.0])
 ax1.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
-ax1.bar(matplotlib.dates.date2num(dates), values, width=4.0, alpha=0.3, label='Day-by-day')
+ax1.bar(matplotlib.dates.date2num(dates), values, color='tab:blue', width=4.0, alpha=0.3, label='Day-by-day')
 for tl in ax1.get_yticklabels():
-    tl.set_color('b')
+    tl.set_color('tab:blue')
 
 ax2 = ax1.twinx()
+ax2.grid(False)
 ax2.set_ylim([0.0, 6.5])
 ax2.yaxis.set_major_locator(plt.MaxNLocator(integer=False))
 ax2.plot_date(matplotlib.dates.date2num(list(rolling_avg.keys())), list(rolling_avg.values()), 'r-', linewidth=0.8, label=f'{days_rolling_avg}-day rolling average')
@@ -65,6 +69,6 @@ for tl in ax2.get_yticklabels():
 
 ax1.legend(loc='upper left')
 ax2.legend(loc='upper right')
-plt.title(label='Edits over time to Wikipedia article $\it{Russo-Ukrainian}$ $\it{War}$')
+plt.title(label='Edits over time to Wikipedia article $\it{Russo-Ukrainian}$ $\it{War}$', pad=35)
 fig.savefig('figure.png', bbox_inches='tight', pad_inches=0.45)
 plt.show()
