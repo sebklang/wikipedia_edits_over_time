@@ -3,7 +3,6 @@ import collections
 import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates
-from numpy import arange
 
 params = {
     'action': 'query',
@@ -63,7 +62,6 @@ for tl in ax1.get_yticklabels():
 ax2 = ax1.twinx()
 ax2.grid(False)
 ax2.set_ylim([0.0, 9.0])
-ax2.set_yticks(arange(0, 8, 1.0))
 ax2.yaxis.set_major_locator(plt.MultipleLocator(base=1.0))
 ax2.plot_date(matplotlib.dates.date2num(list(rolling_avg.keys())), list(rolling_avg.values()), 'r-', linewidth=0.9, label=f'{days_rolling_avg}-day rolling average')
 for tl in ax2.get_yticklabels():
