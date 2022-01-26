@@ -52,7 +52,7 @@ fig = plt.figure(figsize=(10.00, 6.50))
 ax1 = fig.add_subplot(111)
 ax1.set_ylim([0.0, 20.5])
 ax1.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
-ax1.bar(matplotlib.dates.date2num(dates), values, width=3.0, alpha=0.3, label='Day-by-day')
+ax1.bar(matplotlib.dates.date2num(dates), values, width=4.0, alpha=0.3, label='Day-by-day')
 for tl in ax1.get_yticklabels():
     tl.set_color('b')
 
