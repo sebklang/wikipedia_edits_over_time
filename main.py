@@ -12,7 +12,7 @@ params = {
     'rvstart':'2022-01-26T23:59:59Z',
     'rvend':  '2016-01-01T00:00:00Z',
     'rvprop': 'timestamp|user',
-    'rvexcludeuser': 'Cyberbot_I', # Aleksandr_Grigoryev, RenatUK, 
+    'rvexcludeuser': 'Cyberbot_I', # Can only exclude one user. This bot posted 500 edits in 1 day
     'titles': 'Russo-Ukrainian War'
 }
 banned_users = ['Cyberbot_I', 'Aleksandr Grigoryev', 'RenatUK', '178.35.34.32']
