@@ -38,7 +38,7 @@ values = list(date_counts.values())
 
 print("no. of days =", dates[1] - dates[-1] + datetime.timedelta(days=1))
 
-days_rolling_avg = 31
+days_rolling_avg = 15
 rolling_avg = {}
 diff = datetime.timedelta(days=days_rolling_avg//2)
 base_day = dates[0] - diff
@@ -61,7 +61,7 @@ for tl in ax1.get_yticklabels():
 
 ax2 = ax1.twinx()
 ax2.grid(False)
-ax2.set_ylim([0.0, 6.5])
+ax2.set_ylim([0.0, 8.5])
 ax2.yaxis.set_major_locator(plt.MaxNLocator(integer=False))
 ax2.plot_date(matplotlib.dates.date2num(list(rolling_avg.keys())), list(rolling_avg.values()), 'r-', linewidth=0.9, label=f'{days_rolling_avg}-day rolling average')
 for tl in ax2.get_yticklabels():
