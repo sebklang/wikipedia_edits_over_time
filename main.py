@@ -53,7 +53,7 @@ plt.style.use('fivethirtyeight')
 
 ax1 = fig.add_subplot(111)
 ax1.grid(True)
-ax1.set_ylim([0.0, 20])
+ax1.set_ylim([0.0, 16])
 ax1.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
 ax1.bar(matplotlib.dates.date2num(dates), values, color='tab:blue', width=4.0, alpha=0.20, label='Day-by-day')
 for tl in ax1.get_yticklabels():
@@ -61,7 +61,7 @@ for tl in ax1.get_yticklabels():
 
 ax2 = ax1.twinx()
 ax2.grid(False)
-ax2.set_ylim([0.0, 10.0])
+ax2.set_ylim([0.0, 8.0])
 ax2.yaxis.set_major_locator(plt.MaxNLocator(integer=False))
 ax2.plot_date(matplotlib.dates.date2num(list(rolling_avg.keys())), list(rolling_avg.values()), 'r-', linewidth=0.9, label=f'{days_rolling_avg}-day rolling average')
 for tl in ax2.get_yticklabels():
