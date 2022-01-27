@@ -69,6 +69,6 @@ for tl in ax2.get_yticklabels():
 
 ax1.legend(loc='upper left')
 ax2.legend(loc='upper right')
-plt.title(label='Edits over time to Wikipedia article $\it{Russo-Ukrainian}$ $\it{War}$', pad=35)
+plt.title(label='Edits to Wikipedia article $\it{Russo-Ukrainian}$ $\it{War}$', pad=35)
 fig.savefig('figure.png', bbox_inches='tight', pad_inches=0.45)
 plt.show()
