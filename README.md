@@ -3,3 +3,5 @@ Visualizes amount of edits over time on a Wikipedia article. The variables are e
 `pip install matplotlib`
 
 `python main.py`
+
+Check out figure.png!
